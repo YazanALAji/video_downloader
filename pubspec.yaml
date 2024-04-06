@@ -38,7 +38,7 @@ dependencies:
   extractor: ^0.0.3
   flutter_screenutil: ^5.9.0
   in_app_update: ^4.2.2
-  google_fonts: ^6.2.0
+
 
 dev_dependencies:
   flutter_test:
