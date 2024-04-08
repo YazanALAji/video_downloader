@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_video_info/flutter_video_info.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:video_downloader/screens/home_screen.dart';
 import 'package:video_downloader/utils/custom_colors.dart';
 import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
 
@@ -67,8 +68,12 @@ class _AppScreenState extends State<AppScreen> {
       body: PageView(
         controller: _pageController,
         physics: const NeverScrollableScrollPhysics(),
-        children: const [
-          SizedBox(),
+        children: [
+          HomeScreen(
+            onDownloadCompleted: () {
+              _getDownloads();
+            },
+          ),
           SizedBox(),
           SizedBox(),
           SizedBox(),
